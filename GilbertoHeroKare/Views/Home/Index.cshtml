@@ -2,7 +2,10 @@
     ViewBag.Title = "Kare Assessment";
 }
 
-<div class="jumbotron">
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    <div class="go-to-heroes">
+        @using (Html.BeginForm("Heroes", "Home"))
+        {
+            <button type="submit" class="custom-button">View Heroes</button>
+        }
+    </div>
 
