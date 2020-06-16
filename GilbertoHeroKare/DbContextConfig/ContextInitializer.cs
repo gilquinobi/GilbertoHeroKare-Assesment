@@ -56,6 +56,46 @@ namespace GilbertoHeroKare.DbContextConfig
                 Age = 35,
                 City = "Chicago",
                 Picture = "https://www.superherodb.com/pictures2/portraits/10/050/274.jpg?"
+            },
+                new Hero
+            {
+                Id = 6,
+                Name = "Superman",
+                Age = 35,
+                City = "New York",
+                Picture = "https://www.superherodb.com/pictures2/portraits/10/050/274.jpg?"
+            },
+                new Hero
+            {
+                Id = 7,
+                Name = "Black Widow",
+                Age = 29,
+                City = "Chicago",
+                Picture = "https://www.superherodb.com/pictures2/portraits/10/050/248.jpg?v=1578709372"
+            },
+                new Hero
+            {
+                Id = 8,
+                Name = "Thor",
+                Age = 30,
+                City = "Asgard",
+                Picture = "https://www.superherodb.com/pictures2/portraits/10/050/140.jpg?v=1578981491"
+            },
+                new Hero
+            {
+                Id = 9,
+                Name = "Hellboy",
+                Age = 40,
+                City = "Hell",
+                Picture = "https://www.superherodb.com/pictures2/portraits/10/050/813.jpg?v=1578651937"
+            },
+                new Hero
+            {
+                Id = 10,
+                Name = "Dr Manhattan",
+                Age = 39,
+                City = "Chicago",
+                Picture = "https://www.superherodb.com/pictures2/portraits/10/050/884.jpg?v=1578651406"
             }
 
             };
@@ -67,8 +107,21 @@ namespace GilbertoHeroKare.DbContextConfig
                 new Rating { Id = 3, Value = 5, HeroId = 2, Reviewer = "Peter" },
                 new Rating { Id = 4, Value = 3, HeroId = 3, Reviewer = "Carlos" },
                 new Rating { Id = 5, Value = 5, HeroId = 4, Reviewer = "Leon" },
-                new Rating { Id = 6, Value = 2, HeroId = 4, Reviewer = "Jack" },
-                new Rating { Id = 7, Value = 1, HeroId = 5, Reviewer = "Mike" }
+                new Rating { Id = 6, Value = 4, HeroId = 6, Reviewer = "Laura" },
+                new Rating { Id = 7, Value = 3, HeroId = 6, Reviewer = "Edward" },
+                new Rating { Id = 8, Value = 2, HeroId = 7, Reviewer = "Arnold" },
+                new Rating { Id = 9, Value = 1, HeroId = 8, Reviewer = "Dexter" },
+                new Rating { Id = 10, Value = 1, HeroId = 9, Reviewer = "Robert" },
+                new Rating { Id = 11, Value = 3, HeroId = 10, Reviewer = "Carla" },
+                new Rating { Id = 12, Value = 5, HeroId = 10, Reviewer = "Stuart" },
+                new Rating { Id = 13, Value = 4, HeroId = 7, Reviewer = "Jacob" },
+                new Rating { Id = 14, Value = 2, HeroId = 6, Reviewer = "Michael" },
+                new Rating { Id = 15, Value = 4, HeroId = 7, Reviewer = "Jason" },
+                new Rating { Id = 16, Value = 1, HeroId = 9, Reviewer = "Chuck" },
+                new Rating { Id = 17, Value = 2, HeroId = 10, Reviewer = "Paul" },
+                new Rating { Id = 18, Value = 5, HeroId = 2, Reviewer = "Emma" },
+                new Rating { Id = 19, Value = 3, HeroId = 4, Reviewer = "Olvia" },
+                new Rating { Id = 20, Value = 1, HeroId = 5, Reviewer = "Mia" }
             };
 
             if (!context.Ratings.Any())
