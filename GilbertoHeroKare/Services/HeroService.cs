@@ -13,7 +13,7 @@ namespace GilbertoHeroKare.Services
              _heroRepository= heroRepository;
         }
 
-        public List<Hero> GetAllHeroes()
+        public IEnumerable<Hero> GetAllHeroes()
         {
             var heroes = _heroRepository.GetAllHeroes();
 

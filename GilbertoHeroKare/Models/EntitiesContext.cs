@@ -6,6 +6,8 @@ namespace GilbertoHeroKare.Models
     {
         public EntitiesContext() : base("EntitiesContext")
         {
+            Database.SetInitializer<EntitiesContext>(new CreateDatabaseIfNotExists<EntitiesContext>());
+
         }
 
         public DbSet<Hero> Heroes { get; set; }

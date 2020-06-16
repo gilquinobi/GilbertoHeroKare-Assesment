@@ -5,7 +5,7 @@ namespace GilbertoHeroKare.Repository
 {
     public interface IHeroRepository
     {
-        List<Hero> GetAllHeroes();
+        IEnumerable<Hero> GetAllHeroes();
 
     }
 }

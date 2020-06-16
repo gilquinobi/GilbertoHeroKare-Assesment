@@ -6,14 +6,15 @@ namespace GilbertoHeroKare.Repository
 {
     public class HeroRepository : IHeroRepository
     {
-        private readonly EntitiesContext _context = new EntitiesContext();
+        private readonly EntitiesContext _context;
 
-        public HeroRepository(EntitiesContext context)
+        public HeroRepository()
         {
-            _context = context;
+            _context = new EntitiesContext();
+
         }
 
-        public List<Hero> GetAllHeroes()
+        public IEnumerable<Hero> GetAllHeroes()
         {
             var heroes = _context.Heroes.ToList();
 
