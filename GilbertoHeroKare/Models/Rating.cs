@@ -5,5 +5,6 @@
         public int Id { get; set; }
         public string Reviewer { get; set; }
         public int Value { get; set; }
+        public virtual Hero Hero { get; set; }
     }
 }

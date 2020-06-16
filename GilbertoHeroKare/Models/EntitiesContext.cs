@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using GilbertoHeroKare.DbContextConfig;
+using System.Data.Entity;
 
 namespace GilbertoHeroKare.Models
 {
@@ -6,12 +7,16 @@ namespace GilbertoHeroKare.Models
     {
         public EntitiesContext() : base("EntitiesContext")
         {
-            Database.SetInitializer<EntitiesContext>(new CreateDatabaseIfNotExists<EntitiesContext>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<EntitiesContext, 
+                ContextInitializer>());
 
         }
 
         public DbSet<Hero> Heroes { get; set; }
         public DbSet<Rating> Ratings { get; set; }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+        }
     }
 }
