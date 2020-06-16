@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using GilbertoHeroKare.DbContextConfig;
+using System.Data.Entity;
+using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
@@ -13,5 +15,5 @@ namespace GilbertoHeroKare
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
-    }
+}
 }

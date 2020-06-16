@@ -21,5 +21,13 @@ namespace GilbertoHeroKare.Repository
             return heroes;
 
         }
+
+        public IEnumerable<Rating> GetHeroRatings()
+        {
+            var ratings = _context.Ratings.ToList();
+
+            return ratings;
+        }
+
     }
 }

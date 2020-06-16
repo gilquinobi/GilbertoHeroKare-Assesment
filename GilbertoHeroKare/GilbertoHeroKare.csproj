@@ -148,6 +148,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\MathHelper.cs" />
     <Compile Include="Models\EntitiesContext.cs" />
     <Compile Include="Models\Hero.cs" />
     <Compile Include="Models\Rating.cs" />
@@ -162,13 +163,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\HeroesImages\spiderman.jpg" />
-    <Content Include="Content\HeroesImages\thor.jpg" />
-    <Content Include="Content\HeroesImages\captain.jpg" />
-    <Content Include="Content\HeroesImages\batman.jpg" />
-    <Content Include="Content\HeroesImages\superman.jpg" />
-    <Content Include="Content\HeroesImages\hulk.jpg" />
-    <Content Include="Content\HeroesImages\deadpool.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -197,7 +191,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Heroes.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>

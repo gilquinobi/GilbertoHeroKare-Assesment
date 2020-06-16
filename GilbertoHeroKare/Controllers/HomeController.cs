@@ -17,13 +17,11 @@ namespace GilbertoHeroKare.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Heroes()
         {
             var heroes = _heroService.GetAllHeroes();
 
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            return View(heroes);
         }
     }
 }

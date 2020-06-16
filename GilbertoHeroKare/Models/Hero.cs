@@ -11,8 +11,8 @@ namespace GilbertoHeroKare.Models
         public int Age { get; set; }
         [MaxLength(30)]
         public string City { get; set; }
-        public int? RatingMedian { get; set; }
-        public byte[] Picture { get; set; }
+        public decimal? RatingMedian { get; set; }
+        public string Picture { get; set; }
         public virtual IEnumerable<Rating> RatingHistorial { get; set; }
 
 

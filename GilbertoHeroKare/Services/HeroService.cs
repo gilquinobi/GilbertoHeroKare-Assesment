@@ -1,6 +1,7 @@
 ﻿using GilbertoHeroKare.Models;
 using GilbertoHeroKare.Repository;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GilbertoHeroKare.Services
 {
@@ -16,6 +17,12 @@ namespace GilbertoHeroKare.Services
         public IEnumerable<Hero> GetAllHeroes()
         {
             var heroes = _heroRepository.GetAllHeroes();
+            var ratings = _heroRepository.GetHeroRatings();
+
+            foreach(var hero in heroes)
+            {
+                hero.RatingHistorial = ratings.Where(r => r.HeroId == hero.Id);
+            }    
 
             return heroes;
         }
