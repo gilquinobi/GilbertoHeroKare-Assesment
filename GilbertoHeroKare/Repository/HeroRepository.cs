@@ -16,7 +16,7 @@ namespace GilbertoHeroKare.Repository
 
         public IEnumerable<Hero> GetAllHeroes()
         {
-            var heroes = _context.Heroes.ToList();
+            var heroes = _context.Heroes.OrderByDescending(h => h.RatingMedian).ToList();
 
             return heroes;
 

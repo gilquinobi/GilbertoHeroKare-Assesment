@@ -1,5 +1,64 @@
-﻿@{
+﻿
+@model IEnumerable<GilbertoHeroKare.Models.Hero>
+
+@{
     ViewBag.Title = "Heroes";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+
+<h2>@ViewBag.Title</h2>
+
+<div class="container">
+
+    @foreach (var item in Model)
+    {
+        <div class="row hero ">
+            <div class="center">
+                <div class="col-md-2">
+                    <img src="@Html.Raw(item.Picture)" alt="a description of the image">
+                </div>
+                <div class="col-md-2">
+                    <div class="row">
+                        @Html.LabelFor(m => item.Name)
+                        @Html.DisplayFor(m => item.Name)
+                    </div>
+                    <div class="row">
+                        @Html.LabelFor(m => item.Age)
+                        @Html.DisplayFor(m => item.Age)
+                    </div>
+                    <div class="row">
+                        @Html.LabelFor(m => item.City)
+                        @Html.DisplayFor(m => item.City)
+                    </div>
+                    <div class="row">
+                        @Html.LabelFor(m => item.RatingMedian, "Rating Median")
+                        @Html.DisplayFor(m => item.RatingMedian)
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    @foreach (var rating in item.RatingHistorial.Take(5))
+                    { 
+                    <div class="ratingInfo">
+                        <div class="row">
+                            <div class="col-md-6">
+                                @Html.LabelFor(r => rating.Reviewer)
+                                @Html.DisplayFor(r => rating.Reviewer)
+                            </div>
+                            <div class="col-md-6">
+                                @Html.LabelFor(r => rating.Value, "Score Given")
+                                @Html.DisplayFor(r => rating.Value)
+                            </div>
+                           
+                            
+                        </div>
+                        </div>
+                    }
+
+                </div>
+
+            </div>
+        </div>
+
+    }
+
+</div>

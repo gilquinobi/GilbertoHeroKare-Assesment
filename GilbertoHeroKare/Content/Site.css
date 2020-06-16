@@ -22,3 +22,14 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*Hero*/
+
+.hero {
+    margin-bottom: 20px;
+}
+
+img {
+    border-radius: 20%;
+    width: 100px;
+}
